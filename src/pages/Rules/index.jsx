@@ -1,12 +1,14 @@
 import React from "react";
 import { Container, Icon, ScrollTextRules, Title } from "./styles";
 import { Paragraph, NumberParagraph } from "./styles";
-import { Alert } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 
 export default function Rules() {
+  const navigation = useNavigation();
+
   function handleNavToStart() {
-    Alert.alert("ícone clicado")
+    navigation.navigate("Start");
   }
   
   return(
@@ -25,7 +27,7 @@ export default function Rules() {
           senha serão limpos. Se você acertar, será enviado para uma página de
           sucesso, se errar, será enviado para uma página de falha.
         </Paragraph>
-        <Title style={{ marginTop: 30 }}>Jogando Em Dupla</Title>
+        <Title style={{ marginTop: 20 }}>Jogando Em Dupla</Title>
         <Paragraph>
           <NumberParagraph>1 - </NumberParagraph>
           Para jogar esse jogo, precisa de um parceiro, a pessoa 01 vai colocar:
@@ -37,7 +39,7 @@ export default function Rules() {
           disso vai ser iniciada a contagem. Se você errar, o celular vai vibrar
           indicando o erro.
         </Paragraph>
-        <Paragraph style={{ marginBottom: 20 }}>
+        <Paragraph style={{ marginBottom: 30 }}>
           <NumberParagraph>3 - </NumberParagraph>
           Se acertar vocề vai ser enviado para uma página de sucesso, se errar,
           vai ser enviado para uma página de fracasso, terminando assim o jogo.
