@@ -3,17 +3,16 @@ import { Container, Icon, ScrollTextRules, Title } from "./styles";
 import { Paragraph, NumberParagraph } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
-
 export default function Rules() {
   const navigation = useNavigation();
 
   function handleNavToStart() {
     navigation.navigate("Start");
   }
-  
-  return(
+
+  return (
     <Container>
-      <Icon name="arrow-back-ios" onPress={handleNavToStart}/>
+      <Icon name="arrow-back-ios" onPress={handleNavToStart} />
       <ScrollTextRules>
         <Title>Jogando Solo</Title>
         <Paragraph>
@@ -46,5 +45,5 @@ export default function Rules() {
         </Paragraph>
       </ScrollTextRules>
     </Container>
-  )
+  );
 }
