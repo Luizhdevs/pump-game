@@ -7,21 +7,19 @@ export default function Start() {
   const navigation = useNavigation();
 
   const handleNavToPlayAlone = () => {
-    navigation.navigate("PlayAlone")
-
+    navigation.navigate("PlayAlone");
   };
   const handleNavToPlayTogether = () => {
-    navigation.navigate("PlayTogether")
-
+    navigation.navigate("PlayTogether");
   };
   const handleNavToRules = () => {
-    navigation.navigate("Rules")
+    navigation.navigate("Rules");
   };
 
   return (
     <Container>
       <Logo
-        source={require("../../assets/logoDark.png")}
+        source={require("../../assets/logo.png")}
         style={{ resizeMode: "contain" }}
       />
       <Title>Bem-vindo ao {"\n"} Bomb Game</Title>
@@ -34,7 +32,7 @@ export default function Start() {
         buttonText={"Jogar Em Dupla"}
         handlePress={handleNavToPlayTogether}
       />
-      <Rules onPress={handleNavToRules} >Ver as Regras do Jogo</Rules>
+      <Rules onPress={handleNavToRules}>Ver as Regras do Jogo</Rules>
     </Container>
   );
 }

@@ -29,7 +29,7 @@ export const SubTitle = styled.Text`
 `;
 
 export const Rules = styled.Text`
-  margin-top: ${RFValue(80)}px; 
+  margin-top: ${RFValue(80)}px;
   font-size: ${RFValue(16)}px;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.bold};
