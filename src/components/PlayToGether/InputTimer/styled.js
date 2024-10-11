@@ -11,7 +11,7 @@ export const TextTimer = styled.Text`
   font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
   color: ${({ theme }) => theme.colors.white};
-  margin: 0px ${RFValue(5)}px;
+  margin: 0px ${RFValue(0)}px;
 `;
 
 export const InputContainer = styled.View`

@@ -1,33 +1,36 @@
 import React, { useCallback, useEffect } from "react";
 import { StatusBar, View } from "react-native";
 
-import * as SplashScreen from 'expo-splash-screen'
+import * as SplashScreen from "expo-splash-screen";
 
 import theme from "./src/global/theme";
 import Routes from "./src/routes";
 
-import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from "@expo-google-fonts/roboto";
+import {
+  useFonts,
+  Roboto_400Regular,
+  Roboto_500Medium,
+  Roboto_700Bold,
+} from "@expo-google-fonts/roboto";
 import { ThemeProvider } from "styled-components";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,
-    Roboto_700Bold
-  })
+    Roboto_700Bold,
+  });
   useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync;
-    }
+    async function prepare() {}
     prepare();
   }, []);
 
   const onLayoutRootView = useCallback(async () => {
-    if(fontsLoaded) {
-      await SplashScreen.preventAutoHideAsync()
+    if (fontsLoaded) {
+      await SplashScreen.preventAutoHideAsync();
     }
   }, [fontsLoaded]);
-  if(!fontsLoaded) {
+  if (!fontsLoaded) {
     return null;
   }
 

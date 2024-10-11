@@ -16,12 +16,12 @@ export const Title = styled.Text`
 `;
 
 export const Timer = styled.View`
-  margin-bottom: ${RFValue(25)}px;
-  margin-right: ${RFValue(15)}px;
+  margin-bottom: ${RFValue(20)}px;
+  margin-right: ${RFValue(11)}px;
 `;
 
 export const TextTimer = styled.Text`
-  font-size: ${RFValue(20)}px;
+  font-size: ${RFValue(18)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
   color: ${({ theme }) => theme.colors.white};
 `;
